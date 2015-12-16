@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listado Post</h1>
+
+<table class: "striped">
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Mensaje</th>
+      <th>Autor</th>
+      <th>Fecha publicacion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+   <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= post.body %></td>
+        <td><%= post.author %></td>
+        <td><%= post.publication_date %></td>
+        <td><%= link_to 'Mostrar', post, class: "blue lighten-2 waves-effect waves-light btn" %></td>
+        <td><%= link_to 'Editar', edit_post_path(post), class: "amber darken-2 -effect waves-light btn" %></td>
+        <td><%= link_to 'Eliminar', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "red accent-4 waves-effect waves-light btn" %></td>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo', new_post_path, class: "blue-grey darken-2 waves-effect waves-light btn" %>

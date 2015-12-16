@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+<div class='post'>
+<div class="row">
+<div class="col s12 m6">
+<div class="card light-blue lighten-5">
+<div class="card-content white-text">
+<span class="card-title" style="color: #000;">Post: <%= @post.id %></span>
+<div style="color: #000;">
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @post.body %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @post.author %>
+</p>
+
+<p>
+  <strong>Publication date:</strong>
+  <%= @post.publication_date %>
+</p>
+</div>
+<%= link_to 'Editar', edit_post_path(@post), class: "amber darken-1-2 waves-effect waves-light btn" %> |
+<%= link_to 'Atras', posts_path, class: "blue lighten-2 waves-effect waves-light btn" %>
+
+ </div>
+ </div>
+</div>
+</div>
+</div>

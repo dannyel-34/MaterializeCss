@@ -1,0 +1,23 @@
+<nav class="light-blue lighten-1" role="navigation">
+    
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo right">MATERIALIZE CSS </a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'About', about_path %></li>
+        <li><%= link_to 'help', help_path %></li>
+        <li><%= link_to 'Post', posts_path %></li>
+        
+       
+      </ul>
+    </div>
+
+      <ul id="nav-mobile" class="side-nav">
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'Post', posts_path %></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+    
+    
+  </nav>
